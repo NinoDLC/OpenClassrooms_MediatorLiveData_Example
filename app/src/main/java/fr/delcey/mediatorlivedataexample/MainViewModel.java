@@ -78,8 +78,10 @@ public class MainViewModel extends ViewModel {
 
         mainViewStateMediatorLiveData.setValue(
             new MainViewState(
-                // On affiche toujours des Strings, pas des int.
+                // On affiche toujours dans une TextView des Strings ("0"), pas des int (0).
                 // Le ViewState ne doit donc avoir que des Strings (sauf pour des id de base de donnée par exemple, vu qu'ils ne seront pas affichés)
+                // Les int qui peuvent être utilisés sont tous les identifiants de Resource Android. 
+                // Exemple : @DrawableRes (R.drawable.my_super_icon), @StringRes (R.string.my_great_text), @ColorInt et @ColorRes (R.color.my_shiny_color), etc...
                 String.valueOf(result),
                 sentence
             )
