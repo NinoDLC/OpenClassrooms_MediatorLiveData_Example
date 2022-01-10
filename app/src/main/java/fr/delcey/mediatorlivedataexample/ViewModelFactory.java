@@ -54,8 +54,9 @@ public class ViewModelFactory implements ViewModelProvider.Factory {
         // Exemple pour un deuxième ViewModel :
         // else if (modelClass.isAssignableFrom(AnotherViewModel.class)) {
         //     return (T) new AnotherViewModel(
-        //         new NumberRepository(),
-        //         new RandomRepository());
+        //         numberRepository,
+        //         randomRepository
+        //     );
         // }
         throw new IllegalArgumentException("Unknown ViewModel class");
     }
