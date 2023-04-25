@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button buttonAdd = findViewById(R.id.button_add);
-        Button buttonMultiply = findViewById(R.id.button_multiply);
         Button buttonRandom = findViewById(R.id.button_random);
 
         TextView textViewNumber = findViewById(R.id.number_textview);
@@ -48,13 +47,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mainViewModel.onAddButtonClicked();
-            }
-        });
-
-        buttonMultiply.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mainViewModel.onMultiplyButtonClicked();
             }
         });
 

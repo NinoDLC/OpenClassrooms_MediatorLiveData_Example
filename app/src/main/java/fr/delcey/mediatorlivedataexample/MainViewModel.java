@@ -74,7 +74,9 @@ public class MainViewModel extends ViewModel {
 
         // C'est une mauvaise pratique que d'avoir une String en dur dans le ViewModel, il faut la récupérer avec les Resources !
         // C'est juste par simplicité. :)
-        String sentence = "Le nombre " + result + " est " + isEvenOrOdd + ", le nombre aléatoire est " + randomNumber;
+        String sentence = "Le premier nombre est " + number +
+            ", le nombre aléatoire est " + randomNumber +
+            "\nLeur multiplication donne " + result + ", qui est " + isEvenOrOdd + ".";
 
         mainViewStateMediatorLiveData.setValue(
             new MainViewState(
@@ -97,10 +99,6 @@ public class MainViewModel extends ViewModel {
     // de modifier les données comme nécessaire.
     public void onAddButtonClicked() {
         numberRepository.addToNumber(1);
-    }
-
-    public void onMultiplyButtonClicked() {
-        numberRepository.multiplyNumber(2);
     }
 
     public void onRandomButtonClicked() {
